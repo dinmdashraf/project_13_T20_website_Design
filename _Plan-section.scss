@@ -1,0 +1,92 @@
+/*===Plan-section===*/
+#Plan-section{
+    margin-top: 100px;
+}
+.plan{
+    .side-text-col{
+        height: 420px;
+        .card-center{
+            position: relative;
+            top: 48%;
+            transform: translateY(-50%);
+            .text-card{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                border-top-right-radius: 12px;
+                border-left: 4px solid #ef1071;
+                position: relative;
+            }
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: -5px;
+                background: linear-gradient(90deg, rgba(239,12,117,1) 0%, rgba(255,104,2,1) 100%);
+                overflow: hidden;
+                width: 0;
+                height: 100%;
+                transition: .5s ease;
+            }
+            .text-card:hover .overlay {
+                width: 100%;
+                border-top-right-radius: 12px;
+                
+            }
+            .text-card:hover{
+                h3,p{
+                    color: white;
+                }
+                // box-shadow: 3px 3px 10px -1px rgba(0,0,0,0.1);
+                .rotate {
+                    animation: rotation 0.5s ease-in-out;
+                }
+                @keyframes rotation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(359deg);
+                }
+                }
+            }
+        }
+    }
+    .side-img{
+        height: 100%;
+        width: 100%;
+    }
+    .text-img{
+        position: relative;
+        left: 10%;
+        transform: translateX(-10%);
+        .side-text{
+            margin-left: 20px;
+        }
+        img{
+            margin-top: 10px;
+            height: 60px;
+            width: 60px;
+        }
+    }
+    
+
+}
+
+/*===Responsive-css===*/
+
+@media (max-width: 342px) { 
+    .side-text-col{
+        height: 500px !important;
+        padding: 10px !important;
+    }
+    .text-card{
+        padding: 10px !important;
+        p{
+            font-size: 14px;
+        }
+    }
+    
+}

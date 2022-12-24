@@ -1,0 +1,29 @@
+/*===Achievements-section===*/
+#Achievements-section{
+    background: #E9F6FB;
+    padding-bottom: 50px;
+    clear: both;
+}
+.achievements-text{
+    h1{
+        padding-top: 50px;
+        font-size: 40px;
+        text-align: center;
+        font-weight: 600;
+    }
+    @include movement_of_circle;
+    p{
+        text-align: center;
+    }
+    .btn{
+        
+        margin-top: 50px;
+        text-align: center;
+        a{
+            @include button_style_1;
+        }
+        a:hover{
+                background: #ca1262;
+        }
+    }
+}

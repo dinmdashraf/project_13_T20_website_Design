@@ -1,0 +1,311 @@
+/* universal css*/
+
+$color1: #ef1071;
+$color2: #27c2b5;
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* common css */
+
+.txt-decor-none{
+    text-decoration: none;
+}
+.f-w-600{
+    font-weight: 600 !important;
+}
+.txt-center{
+    text-align: center;
+}
+.txt-left{
+    text-align: left;
+}
+.txt-right{
+    text-align: right;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.font-bold{
+    font-weight: bold;
+}
+.font-normal{
+    font-weight: normal;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+.float-left{
+    float: left;
+}
+.d-flex{
+    display: flex;
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+.align-top{
+    align-items: flex-start;
+}
+.justify{
+    justify-content: space-between;
+}
+/* padding-margin common css */
+.m-0{
+    margin: 0;
+}
+.p-0{
+    padding: 0;
+}
+.pt-1{
+    padding-top: 20px;
+}
+.pt-2{
+    padding-top: 30px;
+}
+.pt-3{
+    padding-top: 40px;
+}
+
+.pl-1{
+    padding-left: 20px;
+}
+.pl-2{
+    padding-left: 30px;
+}
+.pl-3{
+    padding-left: 40px;
+}
+
+.pr-1{
+    padding-right: 20px;
+}
+.pr-2{
+    padding-right: 30px;
+}
+.pr-3{
+    padding-right: 40px;
+}
+
+
+.mb-0{
+    margin-bottom: 0;
+}
+.mt-0{
+    margin-top: 0;
+}
+.mt-1{
+    margin-top: 20px;
+}
+.mt-2{
+    margin-top: 30px;
+}
+.mt-3{
+    margin-top: 40px;
+}
+
+.ml-1{
+    margin-left: 10px;
+}
+.ml-2{
+    margin-left: 20px;
+}
+.ml-3{
+    margin-left: 30px;
+}
+
+.mr-1{
+    margin-right: 20px;
+}
+.mr-2{
+    margin-right: 30px;
+}
+.mr-3{
+    margin-right: 40px;
+}
+
+/* //padding-margin common css */
+
+
+/* font-size common css */
+
+.fz-0{
+    font-size: 15pt;
+}
+.fz-1{
+    font-size: 20pt;
+}
+.fz-2{
+    font-size: 25pt;
+}
+.fz-3{
+    font-size: 30pt;
+}
+.fz-4{
+    font-size: 35pt;
+}
+.fz-40{
+    font-size: 40px;
+}
+
+/* //font-size common css */
+
+.w-100{
+    width: 100%;
+}
+
+/* color css */
+
+.green{
+    background: green;
+}
+.blue{
+    color: #4d668f;;
+}
+.white{
+    color: white;
+}
+.text-muted{
+    color: #777777;
+}
+.text-dark{
+    color: #262a2e;
+}
+
+/* //color css */
+
+@mixin movement_of_circle{
+    .moving_circle{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .circle{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #44ce6f;
+            position: relative;
+            animation: mymove 3s infinite;
+        }
+        @keyframes mymove {
+            from {left: 0px;}
+            to {left: 105px;}
+        }
+        .line{
+            width: 100px;
+            border-radius: 10px;
+            height: 7px;
+            background:#ccf1d7;
+        }
+    }
+}
+
+@mixin button_style_1 {
+    text-decoration: none;
+    background: linear-gradient(90deg, rgba(239,12,117,1) 0%, rgba(255,104,2,1) 100%);
+    color: white;
+    padding: 13px 25px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/*=====common-responsive.scss=====*/
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } 
+
+@media only screen and (max-width: 1200px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+/*  GRID OF FIVE   ============================================================================= */
+
+.span_1_of_5 {
+    width: 18.72%;
+}
+
+@media only screen and (max-width: 991px) {
+	.span_1_of_5 {
+		width: 100%; 
+	}
+}
+
+
+
+/*  GRID OF FOUR   ============================================================================= */
+
+.span_1_of_4 {
+	width: 23.8%; 
+}
+
+@media only screen and (max-width: 991px) {
+	.span_1_of_4 {
+		width: 100%; 
+	}
+}
+
+/*  GRID OF TWO   ============================================================================= */
+
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+@media only screen and (max-width: 991px) {
+	.span_1_of_2 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF FOUR and two   ============================================================================= */
+
+.span_1_of_4_2 {
+	width: 23.8%; 
+}
+
+@media only screen and (max-width: 1200px) {
+	.span_1_of_4_2 {
+        width: 40%;
+        margin-right: 5% !important;
+    }
+    .span_1_of_4_2:nth-child(3) {
+        
+        margin-left: 0 !important; 
+    } 
+    .span_1_of_4_2:nth-child(1) {
+        
+        margin-left: 8% !important;  
+    } 
+    .span_1_of_4_2:nth-child(3) {
+        
+        margin-left: 8% !important; 
+    } 
+}
+
+/*  GRID OF THREE   ============================================================================= */
+
+.span_1_of_3 {
+	width: 32.26%; 
+}
+
+@media only screen and (max-width: 991px) {
+	.span_1_of_3 {
+		width: 100%;
+	}
+}

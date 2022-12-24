@@ -1,0 +1,29 @@
+/*===About-us-section===*/
+#About-us-section{
+    margin-top: 100px;
+}
+.about{
+    .img-side{
+        height: 100%;
+        width: 100%;
+    }
+    .about-text{
+        padding: 20px;
+        h1{
+            font-size: 50px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+    a{
+        @include button_style_1;
+    }
+    a:hover{
+        background: #ca1262;
+    }
+    .bottom-text{
+        margin-bottom: 30px;
+    }
+}
+

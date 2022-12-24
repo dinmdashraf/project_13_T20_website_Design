@@ -1,0 +1,72 @@
+/*===Clients-Satisfaction-section===*/
+
+.satisfaction{
+    clear: both;
+    height: 500px;
+    background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url("images/world-map.png") ;
+    h1{
+        padding-top: 20px;
+        font-size: 40px;
+        text-align: center;
+        color: white;
+        margin-bottom: 0px;
+    }
+    @include movement_of_circle;
+    p{
+        padding-top: 0px;
+        font-size: 19px;
+        text-align: center;
+        color: white;
+    }
+    .counter{
+        .number{
+            font-size: 60px;
+            text-align: center;
+            font-weight: bold;
+            color: #ef1071;
+        }
+    }
+    .ideas{
+        clear: both;
+        border: 3px dotted white;
+        text-align: center;
+        width: 500px;
+        padding: 20px;
+        border-radius: 15px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        .btn{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .btn1{
+                @include button_style_1;
+            }
+            .btn1:hover{
+                background: #ca1262;
+            }
+        }
+    }
+}
+
+/*===Responsive-css===*/
+
+@media only screen and (max-width: 1200px) {
+    .satisfaction{
+        height: 800px;
+        .all-satisfaction-elemnts{
+            padding-top: 40px;
+        }
+    }
+    .ideas{
+        margin-top: 300px !important;
+    }
+}
+@media only screen and (max-width: 562px) {
+    .all-satisfaction-elemnts{
+        padding-top: 5px !important;
+    }
+    .ideas{
+        width: 319px !important;
+    }
+}

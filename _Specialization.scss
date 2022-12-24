@@ -1,0 +1,77 @@
+/*===Specialization===*/
+
+#Specialization-section{
+    clear: both;
+}
+.Specialization{
+    background: #f7fafd;
+    padding-bottom: 600px;
+}
+.bg-white{
+    background: white;
+}
+.Specialization-crd_1{
+    height: 120px;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px -1px rgba(0,0,0,0.1);
+    img{
+    margin-top: -30px;
+    transition: 0.5s;
+    }
+    img:hover{
+        margin-top: -203px;
+    }
+}
+.Specialization-text{
+    margin-bottom: 25px;
+    h1{
+        padding-top: 50px;
+        font-size: 30px ;
+        margin-bottom: 0px;
+    }
+    @include movement_of_circle;
+}
+.Specialization-crd_1:hover{
+    box-shadow: 3px 3px 10px -1px rgba(0,0,0,0.3);
+}
+
+@media only screen and (max-width: 991px) { 
+    #Specialization-section{
+        margin-top: 950px;
+    }
+}
+@media only screen and (max-width: 670px) { 
+    .span_1_of_1 {
+		width: 100% !important; 
+	}
+}
+@media only screen and (max-width: 1200px) { 
+    .span_1_of_2_card {
+        width: 50%;
+        
+    }
+    .ss{
+        // position: relative;
+        .Specialization-crd_1{
+            position: relative;
+            left: 50%;
+            img{
+                margin-left: 0px !important;
+            }
+        }
+    }
+    
+}
+
+
+/*===Responsive-css===*/
+
+@media (min-width: 1200px) {
+	.Specialization-crd_1{
+        img{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

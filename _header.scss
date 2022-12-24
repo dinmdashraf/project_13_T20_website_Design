@@ -1,0 +1,161 @@
+/*============= Header(Nabbar) ========*/
+
+#NavBar_section{
+    background-size: cover;
+    background-position: center;
+    height: 692px;
+    position: relative;
+    background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url("images/banner-min.png") ;
+}
+.header{
+    z-index: 1000 !important;
+    color: white;
+    overflow: hidden;
+    .logo{
+        float: left;
+        padding: 10px;
+    }
+    .menu-toggle{
+        display: none;
+    }
+    ul{
+        float: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+            transition: 0.3s;
+            text-align: center;
+            float: left;
+            a{ display: inline-block;
+                color: white;
+                padding: 25px;
+                text-decoration: none;
+                // font-size: 19px;
+            }
+            a:hover{
+                color: $color1;
+                text-decoration: underline;
+            }
+        }
+    }
+    ul{
+        li:hover{
+
+            transform: translateY(-3%);
+        }
+    }
+}
+/*============= Header(Banner) ========*/
+.text{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+}
+.button{
+    .btn1{
+        @include button_style_1;
+    }
+    .btn1:hover{
+        background: #ca1262;
+    }
+    .btn2{
+    text-decoration: none;
+    background: #23aa9f;
+    color: white;
+    padding: 13px 25px;
+    font-weight: bold;
+    border-radius: 5px;
+        img{
+            width: 20px;
+        }
+    }
+    .btn2:hover{
+        background: linear-gradient(90deg, rgba(239,12,117,1) 0%, rgba(255,104,2,1) 100%);
+    }
+    i{
+        font-size: 10px;
+        font-weight: 600;
+    }
+}
+
+/*============= Header(Navbar) Responsive ========*/
+@media only screen and (min-width: 1162px){
+    .container-res {
+        width: 1170px;
+        margin: 0 auto; }
+}
+
+@media (max-width: 1162px) { 
+    #NavBar_section{
+        
+        width: 100%;
+    }
+    .header{
+        position: relative;
+        background: $color2 !important;
+        ul{
+            width: 100%;
+            background: $color2;
+            max-height: 0px;
+            overflow: hidden;
+            
+            li{
+                width: 100%;
+                a{ display: inline-block;
+                    color: white;
+                    text-decoration: none;
+                    transition: 0.3s;
+                }
+            }
+            li:hover{
+                background: #d4d1d1;
+            }
+            li:hover a{
+                    color: $color1;
+                    text-decoration: underline;
+                    margin-right: 7px;
+            }
+        }
+        .menu-toggle{
+            position: absolute;
+            display: block;
+            float: right;
+            right: 20px;
+            top: 20px;
+            transition: 0.5s;
+        }
+        .menu-toggle:hover{
+            margin-top: 3px;
+        }
+        .showing {
+            max-height: 100em;
+        }
+    }
+}
+
+/*============= Header(banner) Responsive ========*/
+@media (max-width: 500px) { 
+    .text{
+        h1{
+            font-size: 40px;
+        }
+        span{
+            font-size: 15px;
+        }
+    }
+    .button{
+        .btn1{
+            padding: 10px 15px;
+            margin: 0;
+        }
+        .btn2{
+            padding: 10px 25px;
+        }
+        i{
+            font-size: 10px;
+            font-weight: 600;
+        }
+    }
+    
+}
